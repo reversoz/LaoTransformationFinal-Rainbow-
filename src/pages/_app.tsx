@@ -8,6 +8,8 @@ import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
 
 import { config } from '../wagmi';
 
+import Stars from '../components/Stars';
+
 const client = new QueryClient();
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -15,6 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <WagmiProvider config={config}>
       <QueryClientProvider client={client}>
         <RainbowKitProvider>
+          <Stars />
           <Component {...pageProps} />
         </RainbowKitProvider>
       </QueryClientProvider>
